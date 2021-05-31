@@ -1,0 +1,34 @@
+Quick Guide:
+
+In terminal:
+	mkdir project_name
+	cd project_name
+	sudo code --user-data-dir="~/.vscode-root" .
+	
+In VS Code:
+	sudo pipenv install django
+	sudo pipenv install djangorestframework
+	sudo pipenv shell
+	django-admin startproject project_name
+	cd project_name
+	django-admin startapp app_name
+	python manage.py migrate
+	change python interpreter to venv type
+	cd projectName
+	python manage.py migrate
+	python manage.py createsuperuser
+	python manage.py runserver
+
+In project_name settings.json add the following:
+	INSTALLED_APPS = [
+		...
+		'rest_framework'
+		'app_name'
+	]
+
+After changing models:
+	python manage.py makemigrations
+	python manage.py migrate 
+	
+Unit tests:
+	python manage.py test
